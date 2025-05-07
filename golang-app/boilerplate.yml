@@ -1,0 +1,16 @@
+dependencies:
+  - name: go-app-use-cobra-cli
+    template-url: ../go-app-use-cobra-cli
+    output-folder: ./go-app-use-cobra-cli
+    variables:
+      - name: Title
+        description: Enter the title of the docs page
+        default: test
+
+  - name: common-apps
+    template-url: ../common-apps
+    output-folder: ./common-apps
+    variables:
+      - name: Title
+        description: Enter the title of the website
+        default: test
