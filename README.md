@@ -5,7 +5,7 @@ Prompt managemenet using Grunwork's boilerplate
 Example:
 
 ```
-boilerplate --template-url git@github.com:gkwa/pleasantpeacock//golang-app \
+boilerplate --template-url git::http://github.com/gkwa/pleasantpeacock//golang-app \
     --disable-dependency-prompt --output-folder=scratch
 ```
 
