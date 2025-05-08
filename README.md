@@ -1,6 +1,6 @@
 # pleasantpeacock
 
-Prompt managemenet using Grunwork's boilerplate
+Prompt managemenet using Gruntwork's boilerplate
 
 Example:
 
