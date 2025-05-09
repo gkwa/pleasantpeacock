@@ -1,0 +1,21 @@
+dependencies:
+  - name: conditional-dependency-example
+    template-url: ../python-package
+    output-folder: trash
+    variables:
+
+
+
+    - name: PackageName
+      description: Name of package
+      type: string
+      default: testpackage
+    - name: PackageAuthorEmail
+      description: Email address of package author
+      type: string
+      default: taylormonacelli@gmail.com
+    - name: 
+      description: Package author first and last name
+      type: string
+      default: Taylor Monacelli
+

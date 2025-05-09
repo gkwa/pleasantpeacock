@@ -1,4 +1,40 @@
 ## absolute import only please
+
 {{include "../python-imports-absolute/python-imports-absolute.tmpl" . | trim}}
 
 {{include "../common-apps/common-apps.tmpl" .}}
+
+## python package scaffold
+
+Please start with this scaffoling for our python package.
+
+- update the description based off context of this discussion
+
+- update package dendencies and dev package dependencies
+
+```
+-- .python-version --
+3.12
+-- pyproject.toml --
+[project]
+name = "{{ .PackageName }}"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "{{ .PackageAuthorName }}", email = "{{ .PackageAuthorEmail }}" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+{{ .PackageName }} = "{{ .PackageName }}:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+-- src/{{ .PackageName }}/__init__.py --
+def main() -> None:
+    print("Hello from {{ .PackageName }}!")
+```
+
