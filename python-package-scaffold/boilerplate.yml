@@ -11,7 +11,3 @@ variables:
     description: Name of package
     type: string
     default: testpackage
-  - name: PythonVersion
-    description: Python version
-    type: string
-    default: '3.12'

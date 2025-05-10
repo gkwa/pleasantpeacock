@@ -4,6 +4,22 @@
 
 {{include "../common-apps/common-apps.tmpl" . | trim}}
 
+## add option to show version
+
+We should be able to see our app's version number using `--version` param.
+
+Here's a snippet of how we could show version without duplicating it in `__init__.py`:
+
+```
+import argparse
+parser = argparse.ArgumentParser(description="...")
+parser.add_argument(
+    "--version", 
+    action="version", 
+    version=f"%(prog)s {importlib.metadata.version('{{.PackageName}}')}"
+)
+```
+
 ## python package scaffold
 
 Please start with this scaffoling for our python package.
@@ -11,11 +27,12 @@ Please start with this scaffoling for our python package.
 - update package dendencies and dev package dependencies
 
 ```
+-- README.md --
 -- src/{{ .PackageName }}/__init__.py --
 def main() -> None:
     print("Hello from {{ .PackageName }}!")
 -- .python-version --
-3.12
+{{ .PythonVersion }}
 -- pyproject.toml --
 [project]
 name = "{{ .PackageName }}"
@@ -25,7 +42,7 @@ readme = "README.md"
 authors = [
     { name = "{{ .PackageAuthorName }}", email = "{{ .PackageAuthorEmail }}" }
 ]
-requires-python = ">=3.12"
+requires-python = ">={{ .PythonVersion }}"
 dependencies = []
 
 [project.scripts]
