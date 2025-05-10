@@ -1,4 +1,7 @@
-# pleasantpeacock
+# [DEPRECATED] pleasantpeacock
+## ⚠️ This repository is no longer maintained and has been superseded by [manyeast](https://github.com/gkwa/manyeast?tab=readme-ov-file#manyeast)
+
+
 
 Prompt managemenet using Gruntwork's boilerplate
 
