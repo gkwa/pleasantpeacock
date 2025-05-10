@@ -11,6 +11,9 @@ Please start with this scaffoling for our python package.
 - update package dendencies and dev package dependencies
 
 ```
+-- src/{{ .PackageName }}/__init__.py --
+def main() -> None:
+    print("Hello from {{ .PackageName }}!")
 -- .python-version --
 3.12
 -- pyproject.toml --
@@ -34,8 +37,4 @@ build-backend = "hatchling.build"
 
 [tool.ruff.lint]
 extend-select = ["I"]
--- src/{{ .PackageName }}/__init__.py --
-def main() -> None:
-    print("Hello from {{ .PackageName }}!")
 ```
-
